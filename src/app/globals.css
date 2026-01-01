@@ -32,6 +32,9 @@
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
+
+  --font-sans: var(--font-poppins-face);
+  --font-rubik: var(--font-rubik-face);
 }
 
 @layer base {
@@ -50,6 +53,6 @@
 
   body {
     /* Now Tailwind knows what bg-background is because of the @theme block */
-    @apply bg-background text-foreground border-border;
+    @apply bg-background text-foreground border-border font-sans;
   }
 }

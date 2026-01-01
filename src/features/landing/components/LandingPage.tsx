@@ -17,12 +17,11 @@ export function LandingPage() {
         </div>
       </header>
       <main className="flex-1 flex flex-col items-center justify-center text-center p-4">
-        <h2 className="text-5xl font-bold font-rubik leading-tight max-w-2xl">
-          The Ultimate Timer for Focus and Productivity
+        <h2 className="text-7xl font-bold font-rubik leading-tight max-w-2xl">
+          HUSH Timer
         </h2>
         <p className="text-lg text-muted-foreground mt-4 max-w-2xl">
-          HUSH Timer is a minimalist timer app designed to help you stay focused
-          and get more done. No distractions, just pure productivity.
+          Modern and feature-rich 1v1 cubing timer
         </p>
         <div className="flex items-center space-x-4 mt-8">
           <Button size="lg">Get Started for Free</Button>

@@ -20,8 +20,30 @@ Role: You are a Senior Full-Stack Engineer. You are building a Next.js frontend 
 - Error Handling: Ktor may return specific HTTP status codes (401 for unauthorized, 422 for validation). You must implement robust error boundaries in the UI to catch these.
 - Zod Validation: Use the Zod library to validate data coming from the Ktor API before it touches the React components. This prevents "undefined" errors if the backend changes.
 
-4. Interaction Protocol
+4. Project Structure
 
-- Phase 1 (Discovery): Ask me: "What does the Ktor endpoint for [feature] look like?"
-- Phase 2 (Contract): Generate the TypeScript types based on my answer.
-- Phase 3 (Implementation): Build the Next.js page and the corresponding fetch logic.
+```
+hush-timer-frontend/
+├── src/
+│   ├── app/                # Next.js App Router (Routing & Layouts only)
+│   ├── components/         # Global shared UI (shadcn, buttons, inputs)
+│   ├── features/           # THE CORE: Domain-specific logic
+│   │   ├── auth/           # Example Feature: Authentication
+│   │   │   ├── components/ # Auth-only components (LoginForm, SignupCard)
+│   │   │   ├── actions/    # Server Actions for Ktor (loginAction.ts)
+│   │   │   ├── types/      # Auth-specific TypeScript interfaces
+│   │   │   └── api/        # Fetchers specifically for Ktor Auth endpoints
+│   │   ├── dashboard/      # Example Feature: Dashboard
+│   │   └── settings/       # Example Feature: User Settings
+│   ├── hooks/              # Global shared hooks (useLocalStorage, useDebounce)
+│   ├── lib/                # Shared utilities & configurations (api-client.ts, utils.ts)
+│   └── types/              # Global shared types/interfaces
+├── .cursorrules            # Crucial for Vibe Coding (Instructions for the agent)
+├── next.config.ts
+└── package.json
+```
+
+5. Design
+
+- Use Tailwind CSS and Shadcn/ui libraries for design.
+- Mainly use Poppins (https://fonts.google.com/specimen/Poppins) by default and use Rubik (https://fonts.google.com/specimen/Rubik) for title fonts.y

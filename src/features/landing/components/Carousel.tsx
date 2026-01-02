@@ -42,7 +42,7 @@ export function Carousel() {
   }, []);
 
   return (
-    <div className="relative w-full xl:w-3/5 mt-16 overflow-hidden">
+    <div className="relative w-full xl:w-3/5 mt-16 overflow-hidden rounded-lg">
       <div
         ref={trackRef}
         className="flex gap-4 mx-0 overflow-x-auto scroll-smooth snap-x snap-mandatory [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"

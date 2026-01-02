@@ -17,7 +17,7 @@ Role: You are a Senior Full-Stack Engineer. You are building a Next.js frontend 
 
 ### Project Structure
 
-```text=
+```text
 hush-timer-frontend/
 ├── src/
 │   ├── app/                # Next.js App Router (Routing & Layouts only)

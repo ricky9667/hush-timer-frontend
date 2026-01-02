@@ -2,9 +2,9 @@ export default function PrivacyPolicyPage() {
   const lastUpdated = 'October 24, 2025';
 
   return (
-    <div className="mx-auto max-w-4xl px-4 py-8 leading-relaxed text-gray-800">
+    <div className="text-foreground mx-auto max-w-4xl px-4 py-8 leading-relaxed">
       <h1 className="mb-4 text-3xl font-bold">Privacy Policy</h1>
-      <p className="mb-6 text-gray-600 italic">Last updated: {lastUpdated}</p>
+      <p className="text-muted-foreground mb-6 italic">Last updated: {lastUpdated}</p>
 
       <section className="mb-8">
         <p className="mb-4">
@@ -18,7 +18,7 @@ export default function PrivacyPolicyPage() {
         </p>
       </section>
 
-      <hr className="my-8 border-gray-300" />
+      <hr className="border-border my-8" />
 
       <h2 className="mt-8 mb-4 text-2xl font-semibold">Interpretation and Definitions</h2>
 
@@ -40,8 +40,8 @@ export default function PrivacyPolicyPage() {
           Company.
         </li>
         <li>
-          <strong>Company:</strong> (referred to as either "the Company", "We", "Us" or "Our")
-          refers to HushTimer, Taiwan.
+          <strong>Company:</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;,
+          &quot;Us&quot; or &quot;Our&quot;) refers to HushTimer, Taiwan.
         </li>
         <li>
           <strong>Personal Data:</strong> Any information that relates to an identified or
@@ -71,7 +71,7 @@ export default function PrivacyPolicyPage() {
 
       <h4 className="mt-4 mb-2 text-lg font-semibold">Usage Data</h4>
       <p className="mb-4">
-        Usage Data is collected automatically and may include Your Device's IP address, browser
+        Usage Data is collected automatically and may include Your Device&apos;s IP address, browser
         type, pages visited, time spent, and unique device identifiers.
       </p>
 
@@ -112,7 +112,7 @@ export default function PrivacyPolicyPage() {
       <ul className="mb-8 list-disc pl-6">
         <li>
           By email:{' '}
-          <a href="mailto:ricky9667@gmail.com" className="text-blue-600 hover:underline">
+          <a href="mailto:ricky9667@gmail.com" className="text-primary hover:underline">
             ricky9667@gmail.com
           </a>
         </li>

@@ -10,10 +10,12 @@ export function LandingPage() {
           <Image src="/logo.png" alt="HUSH Timer Logo" width={40} height={40} className="rounded" />
           <h1 className="font-rubik text-2xl">HUSH Timer</h1>
         </div>
-        <div className="flex items-center space-x-4">
-          <Button variant="ghost">About</Button>
-          <Button variant="ghost">Pricing</Button>
-          <Button>Get Started</Button>
+        <div className="flex items-center">
+          <a href="/privacy-policy">
+            <Button variant="link" className="hover:underline">
+              Privacy Policy
+            </Button>
+          </a>
         </div>
       </header>
       <main className="flex flex-1 flex-col items-center justify-center p-4 text-center">

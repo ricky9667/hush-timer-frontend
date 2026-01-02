@@ -45,5 +45,5 @@ hush-timer-frontend/
 
 5. Design
 
-- Use Tailwind CSS and Shadcn/ui libraries for design.
+- Use Tailwind V4 and Shadcn/ui libraries for design.
 - Mainly use Poppins (https://fonts.google.com/specimen/Poppins) by default and use Rubik (https://fonts.google.com/specimen/Rubik) for title fonts.y

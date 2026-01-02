@@ -7,7 +7,7 @@ export function LandingPage() {
     <div className="flex flex-col min-h-screen">
       <header className="flex items-center justify-between p-4">
         <div className="flex items-center space-x-2">
-          <Image src="/logo.png" alt="HUSH Timer Logo" width={40} height={40} />
+          <Image src="/logo.png" alt="HUSH Timer Logo" width={40} height={40} className="rounded" />
           <h1 className="text-2xl font-rubik">HUSH Timer</h1>
         </div>
         <div className="flex items-center space-x-4">
@@ -23,10 +23,16 @@ export function LandingPage() {
         <p className="text-lg text-muted-foreground mt-4 max-w-2xl">
           Modern and feature-rich 1v1 cubing timer
         </p>
-        <div className="flex items-center space-x-4 mt-8">
-          <Button size="lg">Get Started for Free</Button>
-          <Button size="lg" variant="outline">
-            Learn More
+        <div className="flex items-center space-x-8 mt-8">
+          <a href="https://play.google.com/store/apps/details?id=com.rickyhu.hushtimer.androidApp" target="_blank" rel="noopener noreferrer">
+            <Button size="lg" variant="outline" className="transform transition-all duration-300 hover:scale-105 hover:brightness-90">
+              <Image src="/google-play.png" alt="Google Play Store" width={24} height={24} className="mr-2" unoptimized />
+              Download Android
+            </Button>
+          </a>
+          <Button size="lg" variant="outline" disabled>
+            <Image src="/app-store.png" alt="Apple App Store" width={24} height={24} className="mr-2" unoptimized />
+            iOS in production
           </Button>
         </div>
         <Carousel />

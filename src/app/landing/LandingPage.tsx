@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Carousel } from './Carousel';
 
@@ -10,10 +11,12 @@ export function LandingPage() {
           <Image src="/logo.png" alt="HUSH Timer Logo" width={40} height={40} className="rounded" />
           <h1 className="font-rubik text-2xl">HUSH Timer</h1>
         </div>
-        <div className="flex items-center space-x-4">
-          <Button variant="ghost">About</Button>
-          <Button variant="ghost">Pricing</Button>
-          <Button>Get Started</Button>
+        <div className="flex items-center">
+          <Link href="/privacy-policy">
+            <Button variant="link" className="cursor-pointer hover:underline">
+              Privacy Policy
+            </Button>
+          </Link>
         </div>
       </header>
       <main className="flex flex-1 flex-col items-center justify-center p-4 text-center">
@@ -30,7 +33,7 @@ export function LandingPage() {
             <Button
               size="lg"
               variant="outline"
-              className="transform transition-all duration-300 hover:scale-105 hover:brightness-90"
+              className="transform cursor-pointer transition-all duration-200 hover:scale-110 hover:brightness-90"
             >
               <Image
                 src="/google-play.png"
@@ -49,7 +52,7 @@ export function LandingPage() {
               alt="Apple App Store"
               width={24}
               height={24}
-              className="mr-2"
+              className="mr-2 cursor-not-allowed"
               unoptimized
             />
             iOS in production

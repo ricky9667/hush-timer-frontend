@@ -16,7 +16,11 @@ const fontRubik = Rubik({
 
 export const metadata: Metadata = {
   title: "HUSH Timer",
-  description: "A timer to keep you focused.",
+  description: "Modern & feature-rich 1v1 cubing app",
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png"
+  },
 };
 
 export default function RootLayout({

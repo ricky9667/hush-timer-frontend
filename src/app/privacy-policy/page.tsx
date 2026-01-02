@@ -1,3 +1,10 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'HUSH Timer - Privacy Policy',
+  description: 'Privacy Policy for HUSH Timer',
+};
+
 export default function PrivacyPolicyPage() {
   const lastUpdated = 'October 24, 2025';
 
@@ -40,8 +47,8 @@ export default function PrivacyPolicyPage() {
           Company.
         </li>
         <li>
-          <strong>Company:</strong> (referred to as either "the Company", "We",
-          "Us" or "Our") refers to HushTimer, Taiwan.
+          <strong>Company:</strong> (referred to as either "the Company", "We", "Us" or "Our")
+          refers to HushTimer, Taiwan.
         </li>
         <li>
           <strong>Personal Data:</strong> Any information that relates to an identified or

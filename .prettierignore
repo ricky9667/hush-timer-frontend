@@ -1,0 +1,18 @@
+# Build outputs
+.next
+dist
+build
+out
+
+# Dependencies
+node_modules
+
+# Public assets
+public/
+
+# Environment files
+.env*
+
+# Ktor/Kotlin files (Prettier doesn't handle these well)
+*.kt
+*.kts

@@ -13,7 +13,7 @@ export function LandingPage() {
         </div>
         <div className="flex items-center">
           <Link href="/privacy-policy">
-            <Button variant="link" className="hover:underline">
+            <Button variant="link" className="cursor-pointer hover:underline">
               Privacy Policy
             </Button>
           </Link>
@@ -33,7 +33,7 @@ export function LandingPage() {
             <Button
               size="lg"
               variant="outline"
-              className="transform transition-all duration-300 hover:scale-105 hover:brightness-90"
+              className="transform cursor-pointer transition-all duration-300 hover:scale-105 hover:brightness-90"
             >
               <Image
                 src="/google-play.png"
@@ -52,7 +52,7 @@ export function LandingPage() {
               alt="Apple App Store"
               width={24}
               height={24}
-              className="mr-2"
+              className="mr-2 cursor-not-allowed"
               unoptimized
             />
             iOS in production

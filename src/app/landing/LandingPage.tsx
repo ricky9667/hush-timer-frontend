@@ -33,7 +33,7 @@ export function LandingPage() {
             <Button
               size="lg"
               variant="outline"
-              className="transform cursor-pointer transition-all duration-300 hover:scale-105 hover:brightness-90"
+              className="transform cursor-pointer transition-all duration-200 hover:scale-110 hover:brightness-90"
             >
               <Image
                 src="/google-play.png"

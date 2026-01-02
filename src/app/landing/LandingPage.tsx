@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Carousel } from './Carousel';
 
@@ -11,11 +12,11 @@ export function LandingPage() {
           <h1 className="font-rubik text-2xl">HUSH Timer</h1>
         </div>
         <div className="flex items-center">
-          <a href="/privacy-policy">
+          <Link href="/privacy-policy">
             <Button variant="link" className="hover:underline">
               Privacy Policy
             </Button>
-          </a>
+          </Link>
         </div>
       </header>
       <main className="flex flex-1 flex-col items-center justify-center p-4 text-center">

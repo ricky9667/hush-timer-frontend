@@ -20,8 +20,10 @@ export function LandingPage() {
         </div>
       </header>
       <main className="flex flex-1 flex-col items-center justify-center p-4 text-center">
-        <h2 className="font-rubik max-w-2xl text-7xl leading-tight font-bold">HUSH Timer</h2>
-        <p className="text-muted-foreground mt-4 max-w-2xl text-lg">
+        <h2 className="font-rubik max-w-2xl text-4xl leading-tight font-bold md:text-6xl lg:text-7xl">
+          HUSH Timer
+        </h2>
+        <p className="text-muted-foreground mt-4 max-w-2xl text-lg md:text-xl lg:text-2xl">
           Modern and feature-rich 1v1 cubing timer
         </p>
         <div className="mt-8 grid w-full max-w-md grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-8">

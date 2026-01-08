@@ -46,6 +46,7 @@
     "sharp",
     "unrs-resolver"
   ],
+  "packageManager": "bun@latest",
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
   }

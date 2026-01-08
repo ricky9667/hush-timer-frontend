@@ -9,7 +9,7 @@ export function LandingPage() {
       <header className="flex items-center justify-between p-4">
         <div className="flex items-center space-x-2">
           <Image src="/logo.png" alt="HUSH Timer Logo" width={40} height={40} className="rounded" />
-          <h1 className="font-rubik text-2xl">HUSH Timer</h1>
+          <h1 className="font-rubik hidden text-2xl sm:block">HUSH Timer</h1>
         </div>
         <div className="flex items-center">
           <Link href="/privacy-policy">

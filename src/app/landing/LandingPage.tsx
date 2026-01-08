@@ -24,16 +24,17 @@ export function LandingPage() {
         <p className="text-muted-foreground mt-4 max-w-2xl text-lg">
           Modern and feature-rich 1v1 cubing timer
         </p>
-        <div className="mt-8 flex items-center space-x-8">
+        <div className="mt-8 grid w-full max-w-md grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-8">
           <a
             href="https://play.google.com/store/apps/details?id=com.rickyhu.hushtimer.androidApp"
             target="_blank"
             rel="noopener noreferrer"
+            className="w-full"
           >
             <Button
               size="lg"
               variant="outline"
-              className="transform cursor-pointer transition-all duration-200 hover:scale-110 hover:brightness-90"
+              className="w-full transform cursor-pointer transition-all duration-200 hover:scale-105 hover:brightness-90"
             >
               <Image
                 src="/google-play.png"
@@ -46,7 +47,7 @@ export function LandingPage() {
               Download Android
             </Button>
           </a>
-          <Button size="lg" variant="outline" disabled>
+          <Button size="lg" variant="outline" disabled className="w-full">
             <Image
               src="/app-store.png"
               alt="Apple App Store"

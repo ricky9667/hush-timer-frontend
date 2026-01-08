@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-      - chore/deploy-github-pages
   workflow_dispatch:
 
 permissions:

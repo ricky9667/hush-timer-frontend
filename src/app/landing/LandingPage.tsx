@@ -49,17 +49,28 @@ export function LandingPage() {
               Download Android
             </Button>
           </a>
-          <Button size="lg" variant="outline" disabled className="w-full">
-            <Image
-              src="/app-store.png"
-              alt="Apple App Store"
-              width={24}
-              height={24}
-              className="mr-2 cursor-not-allowed"
-              unoptimized
-            />
-            iOS in production
-          </Button>
+          <a
+            href="https://apps.apple.com/us/app/hush-timer/id6759232805"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full"
+          >
+            <Button
+              size="lg"
+              variant="outline"
+              className="w-full transform cursor-pointer transition-all duration-200 hover:scale-105 hover:brightness-90"
+            >
+              <Image
+                src="/app-store.png"
+                alt="Apple App Store"
+                width={24}
+                height={24}
+                className="mr-2"
+                unoptimized
+              />
+              Download iOS
+            </Button>
+          </a>
         </div>
         <Carousel />
       </main>

@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 
 export function CommunitySupport() {
@@ -26,19 +25,15 @@ export function CommunitySupport() {
             Any ideas or issues with our project? Join our Discord server to interact with us
             directly. 🗣️
           </p>
-          <a
-            href="https://discord.gg/GjfMKprt7q"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full"
+          <Button
+            variant="outline"
+            className="w-full transform cursor-pointer transition-all duration-200 hover:scale-105 hover:bg-[#5865F2] hover:text-white"
+            asChild
           >
-            <Button
-              variant="outline"
-              className="w-full transform cursor-pointer transition-all duration-200 hover:scale-105 hover:bg-[#5865F2] hover:text-white"
-            >
+            <a href="https://discord.gg/GjfMKprt7q" target="_blank" rel="noopener noreferrer">
               Join our Discord
-            </Button>
-          </a>
+            </a>
+          </Button>
         </div>
 
         {/* Buy Me a Coffee Section */}
@@ -55,22 +50,22 @@ export function CommunitySupport() {
           </div>
           <h4 className="mb-2 text-xl font-semibold">Support us</h4>
           <p className="text-muted-foreground mb-4 text-sm">
-            If you want me to continue making these project nice and not die, support me on Buy Me A
-            Coffee! 😋
+            If you want me to continue making these projects nice and not die, support me on Buy Me
+            A Coffee! 😋
           </p>
-          <a
-            href="https://www.buymeacoffee.com/ricky9667"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full"
+          <Button
+            variant="outline"
+            className="w-full transform cursor-pointer transition-all duration-200 hover:scale-105 hover:bg-[#FFDD00] hover:text-black"
+            asChild
           >
-            <Button
-              variant="outline"
-              className="w-full transform cursor-pointer transition-all duration-200 hover:scale-105 hover:bg-[#FFDD00] hover:text-black"
+            <a
+              href="https://www.buymeacoffee.com/ricky9667"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Buy Me a Coffee
-            </Button>
-          </a>
+            </a>
+          </Button>
         </div>
       </div>
     </section>

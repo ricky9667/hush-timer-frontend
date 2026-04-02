@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Carousel } from './Carousel';
+import { CommunitySupport } from './CommunitySupport';
+import { Footer } from './Footer';
 
 export function LandingPage() {
   return (
@@ -73,7 +75,9 @@ export function LandingPage() {
           </a>
         </div>
         <Carousel />
+        <CommunitySupport />
       </main>
+      <Footer />
     </div>
   );
 }

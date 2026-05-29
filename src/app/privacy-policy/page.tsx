@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Footer } from '@/app/landing/Footer';
+import { Footer } from '@/components/ui/Footer';
 
 export const metadata: Metadata = {
   title: 'HUSH Timer - Privacy Policy',

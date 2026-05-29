@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Carousel } from './Carousel';
 import { CommunitySupport } from './CommunitySupport';
-import { Footer } from './Footer';
+import { Footer } from '@/components/ui/Footer';
 
 export function LandingPage() {
   return (

@@ -35,7 +35,7 @@ export function CommunitySupport() {
 
         {/* Crowdin Section */}
         <SupportCard
-          iconBackgroundClassName="bg-[#5865F2]"
+          iconBackgroundClassName="bg-[#263238]"
           title="Help us translate"
           description={
             <>
@@ -47,16 +47,11 @@ export function CommunitySupport() {
           buttonClassName="w-full transform cursor-pointer transition-all duration-200 hover:scale-105 hover:bg-[#263238] hover:text-white"
           icon={
             <svg
-              width="80"
-              height="80"
+              className="h-10 w-10"
               viewBox="0 0 80 80"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                d="M56.6667 80H23.3333C9.16667 80 0 70.8333 0 56.6667V23.0781C0 9.16667 9.16667 0 23.0781 0H56.6667C70.8333 0 80 9.16667 80 23.3333V56.6667C80 70.8333 70.8333 80 56.6667 80Z"
-                fill="#263238"
-              />
               <path
                 d="M51.3968 54.5041C49.9 54.5041 48.5662 54.0395 47.4621 53.1296C46.1432 52.0583 45.0947 50.4611 45.0576 48.5835C45.0391 47.6352 46.0357 47.6352 46.0357 47.6352C46.0357 47.6352 47.6548 47.616 48.4402 47.616C49.2257 47.6352 49.4554 48.7678 49.4924 49.052C49.7962 51.5976 51.1856 52.7072 52.2526 53.214C52.8936 53.5174 52.7342 54.4657 51.3968 54.508V54.5041Z"
                 fill="white"

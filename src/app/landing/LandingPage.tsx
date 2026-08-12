@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Carousel } from './Carousel';
 import { CommunitySupport } from './CommunitySupport';
 import { Footer } from '@/components/ui/Footer';
+import { AppStoreIcon, GooglePlayIcon } from '@/components/icons';
 
 type LandingRevealDelay = `${number}ms`;
 
@@ -56,14 +57,7 @@ export function LandingPage() {
                   variant="outline"
                   className="w-full transform cursor-pointer transition-all duration-200 hover:scale-105 hover:brightness-90"
                 >
-                  <Image
-                    src="/google-play.png"
-                    alt="Google Play Store"
-                    width={24}
-                    height={24}
-                    className="mr-2"
-                    unoptimized
-                  />
+                  <GooglePlayIcon className="mr-2 size-6 shrink-0" />
                   Download Android
                 </Button>
               </a>
@@ -78,14 +72,7 @@ export function LandingPage() {
                   variant="outline"
                   className="w-full transform cursor-pointer transition-all duration-200 hover:scale-105 hover:brightness-90"
                 >
-                  <Image
-                    src="/app-store.png"
-                    alt="Apple App Store"
-                    width={24}
-                    height={24}
-                    className="mr-2"
-                    unoptimized
-                  />
+                  <AppStoreIcon className="mr-2 size-6 shrink-0" />
                   Download iOS
                 </Button>
               </a>

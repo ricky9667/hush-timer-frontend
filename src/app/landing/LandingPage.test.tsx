@@ -22,6 +22,31 @@ const { LandingPage } = await import('./LandingPage');
 const globalsCss = await Bun.file(new URL('../globals.css', import.meta.url)).text();
 
 describe('LandingPage entrance animation', () => {
+  test('renders vector download and community icons without the legacy raster assets', () => {
+    const html = renderToStaticMarkup(<LandingPage />);
+
+    expect(html).toContain('Download Android');
+    expect(html).toContain('Download iOS');
+    expect(html).toContain('Join our Discord');
+    expect(html).toContain('Buy Me a Coffee');
+    expect(html).toContain('viewBox="0 0 466 511.98"');
+    expect(html).toContain('viewBox="0 0 800 800"');
+    expect(html).not.toContain('/google-play.png');
+    expect(html).not.toContain('/app-store.png');
+    expect(html.match(/aria-hidden="true"/g)?.length).toBeGreaterThanOrEqual(4);
+  });
+
+  test('keeps download icons at their requested size inside flex buttons', () => {
+    const html = renderToStaticMarkup(<LandingPage />);
+    const googlePlayIcon = html.match(/<svg[^>]*viewBox="0 0 466 511\.98"[^>]*>/)?.[0];
+    const appStoreIcon = html.match(/<svg[^>]*viewBox="0 0 800 800"[^>]*>/)?.[0];
+
+    expect(googlePlayIcon).toContain('size-6');
+    expect(googlePlayIcon).toContain('shrink-0');
+    expect(appStoreIcon).toContain('size-6');
+    expect(appStoreIcon).toContain('shrink-0');
+  });
+
   test('renders the five ordered reveal groups with the approved delays', () => {
     const html = renderToStaticMarkup(<LandingPage />);
     const reveals = Array.from(

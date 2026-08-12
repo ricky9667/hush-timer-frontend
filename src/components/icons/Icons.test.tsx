@@ -5,6 +5,7 @@ import {
   BuyMeACoffeeIcon,
   DiscordIcon,
   GooglePlayIcon,
+  InstagramIcon,
   PrivacyPolicyIcon,
   ThemeDarkIcon,
   ThemeLightIcon,
@@ -26,13 +27,14 @@ describe('icons', () => {
       <>
         <BuyMeACoffeeIcon />
         <GooglePlayIcon />
+        <InstagramIcon />
         <PrivacyPolicyIcon />
         <ThemeDarkIcon />
         <ThemeLightIcon />
       </>
     );
 
-    expect(html.match(/<svg/g)).toHaveLength(5);
+    expect(html.match(/<svg/g)).toHaveLength(6);
     expect(html).toContain('viewBox="0 0 466 511.98"');
     expect(html).toContain('#EA4335');
     expect(html).toContain('#4285F4');

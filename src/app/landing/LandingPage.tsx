@@ -55,7 +55,7 @@ export function LandingPage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="w-full transform cursor-pointer transition-all duration-200 hover:scale-105 hover:brightness-90"
+                  className="w-full transform cursor-pointer transition-all duration-100 hover:scale-105 hover:brightness-90"
                 >
                   <GooglePlayIcon className="mr-2 size-6 shrink-0" />
                   Download Android
@@ -70,7 +70,7 @@ export function LandingPage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="w-full transform cursor-pointer transition-all duration-200 hover:scale-105 hover:brightness-90"
+                  className="w-full transform cursor-pointer transition-all duration-100 hover:scale-105 hover:brightness-90"
                 >
                   <AppStoreIcon className="mr-2 size-6 shrink-0" />
                   Download iOS

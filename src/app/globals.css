@@ -56,3 +56,32 @@
     @apply bg-background text-foreground border-border font-sans;
   }
 }
+
+@keyframes landing-slide-up-fade {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer components {
+  .landing-reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: landing-slide-up-fade 560ms cubic-bezier(0.2, 0, 0, 1) var(--landing-reveal-delay)
+      forwards;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing-reveal {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}

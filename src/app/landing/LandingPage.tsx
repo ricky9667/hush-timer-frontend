@@ -1,8 +1,14 @@
 import Image from 'next/image';
+import type { CSSProperties } from 'react';
 import { Button } from '@/components/ui/button';
 import { Carousel } from './Carousel';
 import { CommunitySupport } from './CommunitySupport';
 import { Footer } from '@/components/ui/Footer';
+
+type LandingRevealDelay = `${number}ms`;
+
+const revealDelay = (delay: LandingRevealDelay) =>
+  ({ '--landing-reveal-delay': delay }) as CSSProperties;
 
 export function LandingPage() {
   return (
@@ -10,21 +16,35 @@ export function LandingPage() {
       <main className="flex flex-1 flex-col items-center text-center">
         <section className="flex min-h-[min(640px,calc(100svh-4rem))] w-full items-center justify-center px-6 py-[72px] max-sm:min-h-0 max-sm:px-4 max-sm:py-16">
           <div className="flex w-full max-w-[850px] flex-col items-center">
-            <Image
-              src="/logo.png"
-              alt="HUSH Timer app icon"
-              width={168}
-              height={168}
-              className="mb-7 size-[clamp(112px,14vw,168px)] rounded-[22%]"
-              priority
-            />
-            <h1 className="font-rubik text-[clamp(43px,7.6vw,92px)] leading-[0.98] font-bold tracking-[-0.04em] whitespace-nowrap max-[380px]:text-[35px]">
+            <div data-landing-reveal="logo" className="landing-reveal" style={revealDelay('40ms')}>
+              <Image
+                src="/logo.png"
+                alt="HUSH Timer app icon"
+                width={168}
+                height={168}
+                className="mb-7 size-[clamp(112px,14vw,168px)] rounded-[22%]"
+                priority
+              />
+            </div>
+            <h1
+              data-landing-reveal="title"
+              className="landing-reveal font-rubik text-[clamp(43px,7.6vw,92px)] leading-[0.98] font-bold tracking-[-0.04em] whitespace-nowrap max-[380px]:text-[35px]"
+              style={revealDelay('90ms')}
+            >
               HUSH Timer
             </h1>
-            <p className="text-muted-foreground mt-7 max-w-2xl text-[clamp(19px,2.4vw,30px)] leading-tight font-semibold text-balance max-[380px]:text-lg max-sm:max-w-[22ch]">
+            <p
+              data-landing-reveal="subtitle"
+              className="landing-reveal text-muted-foreground mt-7 max-w-2xl text-[clamp(19px,2.4vw,30px)] leading-tight font-semibold text-balance max-[380px]:text-lg max-sm:max-w-[22ch]"
+              style={revealDelay('160ms')}
+            >
               Modern and feature-rich 1v1 cubing timer
             </p>
-            <div className="mt-16 grid w-full max-w-md grid-cols-1 gap-4 max-sm:mt-[52px] sm:grid-cols-2 sm:gap-8">
+            <div
+              data-landing-reveal="downloads"
+              className="landing-reveal mt-16 grid w-full max-w-md grid-cols-1 gap-4 max-sm:mt-[52px] sm:grid-cols-2 sm:gap-8"
+              style={revealDelay('230ms')}
+            >
               <a
                 href="https://play.google.com/store/apps/details?id=com.rickyhu.hushtimer.androidApp"
                 target="_blank"
@@ -72,8 +92,14 @@ export function LandingPage() {
             </div>
           </div>
         </section>
-        <Carousel />
-        <CommunitySupport />
+        <div
+          data-landing-reveal="lower-content"
+          className="landing-reveal flex w-full flex-col items-center"
+          style={revealDelay('300ms')}
+        >
+          <Carousel />
+          <CommunitySupport />
+        </div>
       </main>
       <Footer />
     </div>

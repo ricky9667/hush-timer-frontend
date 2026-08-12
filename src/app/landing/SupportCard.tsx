@@ -29,7 +29,7 @@ export function SupportCard({
         {icon}
       </div>
       <h4 className="mb-2 text-xl font-semibold">{title}</h4>
-      <p className="text-muted-foreground mb-4 text-sm">{description}</p>
+      <p className="text-muted-foreground mb-4 flex-1 text-sm">{description}</p>
       <Button variant="outline" className={buttonClassName} asChild>
         <a href={href} target="_blank" rel="noopener noreferrer">
           {buttonText}

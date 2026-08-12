@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Script from 'next/script';
 import type { CSSProperties } from 'react';
 import { SupportCard } from '@/app/landing/SupportCard';
 import { Button } from '@/components/ui/button';
@@ -32,6 +33,19 @@ export function LandingPage() {
         </div>
       </main>
       <Footer />
+      <Script
+        data-name="BMC-Widget"
+        data-cfasync="false"
+        src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+        data-id="ricky9667"
+        data-description="Support me on Buy me a coffee!"
+        data-message=""
+        data-color="#FBDD02"
+        data-position="Right"
+        data-x_margin="18"
+        data-y_margin="18"
+        strategy="afterInteractive"
+      />
     </div>
   );
 }

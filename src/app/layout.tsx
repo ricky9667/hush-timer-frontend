@@ -4,6 +4,7 @@ import Script from 'next/script';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Navbar } from '@/components/ui/Navbar';
+import { TooltipProvider } from '@/components/ui/tooltip';
 
 const fontSans = Poppins({
   subsets: ['latin'],
@@ -39,8 +40,10 @@ export default function RootLayout({
     >
       <body className="font-sans">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Navbar />
-          {children}
+          <TooltipProvider>
+            <Navbar />
+            {children}
+          </TooltipProvider>
         </ThemeProvider>
         <Script
           data-name="BMC-Widget"

@@ -63,7 +63,7 @@ export function Carousel() {
   }, [api, prefersReducedMotion]);
 
   return (
-    <div className="mt-16 w-full px-4 xl:w-3/5">
+    <div className="w-full px-4 xl:w-3/5">
       <ShadcnCarousel
         opts={{ align: 'start', loop: true }}
         plugins={[autoplay.current]}

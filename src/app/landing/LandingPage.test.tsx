@@ -107,6 +107,26 @@ describe('LandingPage entrance animation', () => {
     expect(lowerContent?.[1]).toContain('items-center');
   });
 
+  test('lets the hero subtitle use the available device width before wrapping', () => {
+    const html = renderToStaticMarkup(<LandingPage />);
+    const subtitle = html.match(/data-landing-reveal="subtitle"[^>]*class="([^"]*)"/);
+
+    expect(subtitle?.[1]).toContain('max-w-full');
+    expect(subtitle?.[1]).not.toContain('text-balance');
+    expect(subtitle?.[1]).not.toContain('max-sm:max-w-[22ch]');
+  });
+
+  test('uses one responsive spacing rhythm between the main landing sections', () => {
+    const html = renderToStaticMarkup(<LandingPage />);
+    const lowerContent = html.match(/data-landing-reveal="lower-content"[^>]*class="([^"]*)"/);
+
+    expect(lowerContent?.[1]).toContain('gap-24');
+    expect(lowerContent?.[1]).toContain('pt-24');
+    expect(lowerContent?.[1]).toContain('sm:gap-32');
+    expect(lowerContent?.[1]).toContain('sm:pt-32');
+    expect(html).not.toContain('class="mt-16 w-full');
+  });
+
   test('keeps reveal content hidden during its delay and disables the animation for reduced motion', () => {
     expect(globalsCss).toMatch(
       /@keyframes landing-slide-up-fade\s*\{\s*from\s*\{\s*opacity:\s*0;\s*transform:\s*translateY\(16px\);/

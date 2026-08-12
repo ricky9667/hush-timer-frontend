@@ -24,11 +24,11 @@ export function LandingPage() {
         <HeroSection />
         <div
           data-landing-reveal="lower-content"
-          className="landing-reveal flex w-full flex-col items-center"
+          className="landing-reveal flex w-full flex-col items-center gap-24 pt-24 sm:gap-32 sm:pt-32"
           style={revealDelay('300ms')}
         >
           <Carousel />
-          <CommunitySupport />
+          <CommunitySupportSection />
         </div>
       </main>
       <Footer />
@@ -59,7 +59,7 @@ function HeroSection() {
         </h1>
         <p
           data-landing-reveal="subtitle"
-          className="landing-reveal text-muted-foreground mt-7 max-w-2xl text-[clamp(19px,2.4vw,30px)] leading-tight font-semibold text-balance max-[380px]:text-lg max-sm:max-w-[22ch]"
+          className="landing-reveal text-muted-foreground mt-7 max-w-full text-[clamp(19px,2.4vw,30px)] leading-tight font-semibold max-[380px]:text-lg"
           style={revealDelay('160ms')}
         >
           Modern and feature-rich 1v1 cubing timer
@@ -105,9 +105,9 @@ function HeroSection() {
   );
 }
 
-function CommunitySupport() {
+function CommunitySupportSection() {
   return (
-    <section className="mt-16 w-full max-w-6xl px-4">
+    <section className="w-full max-w-6xl px-4">
       <h3 className="font-rubik mb-8 text-center text-3xl font-bold md:text-4xl">
         Community & Support
       </h3>

@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { PrivacyPolicyLink } from './PrivacyPolicyLink';
-import { ThemeToggle } from './ThemeToggle';
+import { PrivacyPolicyLink } from '@/components/PrivacyPolicyLink';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
-export function SiteHeader() {
+export function Navbar() {
   return (
     <header className="border-border bg-background/85 sticky top-0 z-20 h-16 border-b backdrop-blur-[14px] max-sm:h-[58px]">
       <div className="mx-auto flex h-full max-w-[1180px] items-center justify-between px-6 max-sm:px-4">

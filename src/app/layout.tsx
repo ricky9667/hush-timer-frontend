@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Poppins, Rubik } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
-import { SiteHeader } from '@/components/SiteHeader';
+import { Navbar } from '@/components/ui/Navbar';
 
 const fontSans = Poppins({
   subsets: ['latin'],
@@ -38,7 +38,7 @@ export default function RootLayout({
     >
       <body className="font-sans">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <SiteHeader />
+          <Navbar />
           {children}
         </ThemeProvider>
       </body>
